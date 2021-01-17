@@ -1,0 +1,12 @@
+RECEIVE
+* add (id) - add video to queue
+* remove (index) - remove video from queue
+* move (index, targetIndex) - change the ordering of videos by moving one 
+* next - skip current
+* setPlay (boolean) - start or pause
+* setVolume (int) - set the volume
+* setRepeatAll (boolean) - set the playlist mode on or off
+* setShuffle (boolean) - set the shuffle mode on or off
+
+SEND
+* update (PlayerState) - send all the player state

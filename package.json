@@ -1,0 +1,26 @@
+{
+  "name": "giggl",
+  "version": "0.1.0",
+  "main": "dist/app.js",
+  "scripts": {
+    "all": "npm run build-front && npm run build-back && npm run copy-front && npm start",
+    "build-front": "echo Building front-end... This may take a minute... && cd front && npm run build",
+    "build-back": "echo Building back-end... && tsc",
+    "copy-front": "echo Copying front-end... && (if exist dist\\public\\ rmdir /S /Q dist\\public) && xcopy /I /E front\\build dist\\public",
+    "start": "echo Starting web-server... && node dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "exclude": [
+    "front"
+  ],
+  "dependencies": {
+    "express": "4.17.1",
+    "socket.io": "2.3.0"
+  },
+  "devDependencies": {
+    "@types/express": "4.17.4",
+    "@types/socket.io": "2.1.4",
+    "tslint": "6.1.1",
+    "typescript": "3.8.3"
+  }
+}
